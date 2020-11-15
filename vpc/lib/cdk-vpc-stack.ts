@@ -29,10 +29,15 @@ export class CdkVpcStack extends cdk.Stack {
         stringValue: vpc.vpcId,
     });
 
-    const endpointS3 = vpc.addGatewayEndpoint('endpoint-S3', {
+    const endpointS3Pri = vpc.addGatewayEndpoint('endpoint-S3-pri', {
         service: ec2.GatewayVpcEndpointAwsService.S3,
         subnets: [{ subnetType: ec2.SubnetType.PRIVATE }]
     });
+    const endpointS3Pub = vpc.addGatewayEndpoint('endpoint-S3-Pub', {
+      service: ec2.GatewayVpcEndpointAwsService.S3,
+      subnets: [{ subnetType: ec2.SubnetType.PUBLIC }]
+  });
+
 
 
 
