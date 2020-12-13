@@ -44,5 +44,6 @@
         ]
       }
     ]
-  }
+  },
+  "ssm:account=238836858026:parameterName=/sns/subscriptionMail:region=ap-northeast-1": "snowpff14@gmail.com"
 }
